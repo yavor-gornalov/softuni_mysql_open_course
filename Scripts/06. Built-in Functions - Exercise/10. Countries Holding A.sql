@@ -5,5 +5,6 @@ SELECT
 FROM
     `countries`
 WHERE
-    CHAR_LENGTH(`country_name`) - CHAR_LENGTH(REPLACE(UPPER(`country_name`), 'A', '')) > 2
+	`country_name` LIKE "%a%a%a%"
+    -- CHAR_LENGTH(`country_name`) - CHAR_LENGTH(REPLACE(UPPER(`country_name`), 'A', '')) > 2
 ORDER BY `iso_code`;
