@@ -7,6 +7,7 @@ SELECT
         WHEN wd.age < 31 THEN '[21-30]'
         WHEN wd.age < 41 THEN '[31-40]'
         WHEN wd.age < 51 THEN '[41-50]'
+        WHEN wd.age < 61 THEN '[51-60]'
         ELSE '[61+]'
     END AS age_group,
     COUNT(wd.age) AS wizard_count
