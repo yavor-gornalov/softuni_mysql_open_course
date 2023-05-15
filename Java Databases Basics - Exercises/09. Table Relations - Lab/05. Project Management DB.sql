@@ -17,15 +17,16 @@ CREATE TABLE employees (
 CREATE TABLE projects (
     id INT PRIMARY KEY AUTO_INCREMENT,
     client_id INT,
-    project_lead_id INT,
-    CONSTRAINT fk_projects_clients FOREIGN KEY (client_id)
-        REFERENCES clients (id),
-    CONSTRAINT fk_projects_employees FOREIGN KEY (project_lead_id)
-        REFERENCES employees (id)
+    project_lead_id INT
 );
 
+ALTER TABLE projects 
+ADD constraint FOREIGN KEY (client_id) 
+	REFERENCES clients(id), 
+ADD CONSTRAINT FOREIGN KEY(project_lead_id) 
+	REFERENCES employees(id);
+
 ALTER TABLE employees
-ADD CONSTRAINT fk_employees_projects FOREIGN KEY (project_id) REFERENCES prjects(id)
-
-
+ADD CONSTRAINT FOREIGN KEY (project_id)
+	REFERENCES projects(id);
 
