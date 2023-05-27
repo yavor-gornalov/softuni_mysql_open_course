@@ -4,7 +4,7 @@ SELECT
     c.id,
     c.make,
     c.mileage,
-    COUNT(*) AS count_of_courses,
+    COUNT(s.bill) AS count_of_courses,
     ROUND(AVG(s.bill), 2) AS avg_bill
 FROM
     cars AS c
