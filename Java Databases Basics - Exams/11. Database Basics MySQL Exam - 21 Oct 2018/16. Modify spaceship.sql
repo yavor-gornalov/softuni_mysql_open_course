@@ -6,6 +6,7 @@ CREATE PROCEDURE udp_modify_spaceship_light_speed_rate(spaceship_name VARCHAR(50
 BEGIN
 	START TRANSACTION; 
 		IF ((SELECT count(*) FROM spaceships as s WHERE s.name = spaceship_name) <> 1) THEN 
+			SIGNAL SQLSTATE '45000' SET MESSAGE_TEXT = 'Spaceship you are trying to modify does not exists.';
 			ROLLBACK;
         ELSE 
 			UPDATE spaceships AS s
