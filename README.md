@@ -1,6 +1,6 @@
 # MySQL open course - Database Basics
 
-This repository contains simple exercises solved during the MySQL open course at Softuni. Exercises are divided into separate query files, prepared for testing in Judge system. Database structures and problems, could be accessed on this [LINK]([https://www.google.com](https://judge.softuni.org/Contests/#!/List/ByCategory/66/Java-Databases-Basics-Exercises)).
+This repository contains simple exercises solved during the MySQL open course at Softuni. Exercises are divided into separate query files, prepared for testing in Judge system. Database structures and problems, could be accessed on this [LINK](https://judge.softuni.org/Contests/#!/List/ByCategory/66/Java-Databases-Basics-Exercises).
 
 ### Contents:
 **I. Java Databases Basics - Exercises**
